@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;800&family=Caudex:wght@700&family=Orbitron:wght@700&display=swap');
+@import 'normalize.css';
+
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    padding: 0;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3, p {
+    margin: 0;
+}
+
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
+body {
+    background: linear-gradient(108.76deg, #343131 -1.39%, #1D1919 102.08%);
+    font-family: 'Catamaran', sans-serif;
+}
+
+body, html {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    grid-template-rows: 98px 1fr;
+    height: 100%;
+}
+
+.content-sidebar__button {
+    display: block;
+    width: 100%;
+    height: 98px;
+    background: linear-gradient(127.44deg, #505050 0%, #383838 100%);
+    position: relative;
+    border: none;
+}
+
+.content-sidebar__button::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/menu.svg');
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 12px);
+}
+
+.content-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #505050;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.content-sidebar__list {
+    margin-bottom: 60px;
+}
+
+.content-sidebar__item {
+    margin-top: 63px;
+}
+
+.content-sidebar__link {
+    display: block;
+    background-position: center center;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+}
+
+.content-sidebar_fb {
+    background-image: url('../images/fb.svg');
+}
+
+.content-sidebar_inst {
+    background-image: url('../images/inst.svg');
+}
+
+.content-sidebar_tw {
+    background-image: url('../images/tw.svg');
+}
+
+.content-header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.content-main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
